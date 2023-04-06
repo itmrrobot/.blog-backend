@@ -10,6 +10,6 @@ app.use(blogRouter);
 app.use(userRouter);
 
 
-app.listen(4000,() => {
+app.listen(process.env.PORT,() => {
     console.log('Server started on port 4000');
 })
