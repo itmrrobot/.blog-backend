@@ -5,7 +5,7 @@ const userRouter = require('./router/user');
 const path = require('path');
 const imagesPath = path.join(__dirname,'../images');
 const app = express();
-var cors = require('cors')
+const cors = require('cors')
 
 
 app.use(express.static(imagesPath));
