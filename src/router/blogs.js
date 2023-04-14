@@ -76,13 +76,7 @@ router.get('/blogs/:id',auth,async(req,res) => {
 })
 
 router.post('/blogs',auth,upload.single('image'),async(req,res) => {
-    let image; 
-    if(req.file) {
-        image = '/'+req.file.filename;
-    }
-    console.log(req.file);
     const blogs = new Blogs({
-        image: image,
         ...req.body,
         authorId: req.user._id,
         authorName: req.user.name
